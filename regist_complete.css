@@ -21,50 +21,22 @@ a{
 }
 h3{
     text-align: left;
-    padding-left: 10%;
-    padding-bottom:15px;
+    padding-left:10%; 
+}
+h1{
+    text-align: center;
+    margin-top:300px;
+    margin-bottom: 300px;
 }
 form{
     text-align: center;
 }
-table{
-    margin:auto;
-}
-td{
-    text-align: left;
-    padding-left:20px;
-}
-.form-control.error input{
-    border-color: red;
-    bottom: 0;
-}
-.form-control.error select{
-    border-color: red;
-    bottom: 0;
-}
-p{
-    color: red;
-    bottom: 0;
-    top:0;
-    visibility: hidden;
-}
-.form-control.error p{
-    visibility: visible;
-}
-.submit{
+.botton1{
     margin: auto;
     padding: 15px 80px 15px 80px;
-    margin-top: 35px;
     background-color: white;
     border: solid 1px;
 }
-.form-control input{
-    border:2px solid;
-}
-.form-control select{
-    border:2px solid;
-}
-
 footer{
     clear: left;
     width: 100%;

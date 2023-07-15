@@ -21,8 +21,7 @@ a{
 }
 h3{
     text-align: left;
-    padding-left: 10%;
-    padding-bottom:15px;
+    padding-left:10%; 
 }
 form{
     text-align: center;
@@ -32,39 +31,27 @@ table{
 }
 td{
     text-align: left;
-    padding-left:20px;
+    padding-top: 25px;
+    padding-left:50px;
 }
-.form-control.error input{
-    border-color: red;
-    bottom: 0;
+.password{
+    border: none;
+    outline: none;
 }
-.form-control.error select{
-    border-color: red;
-    bottom: 0;
-}
-p{
-    color: red;
-    bottom: 0;
-    top:0;
-    visibility: hidden;
-}
-.form-control.error p{
-    visibility: visible;
-}
-.submit{
-    margin: auto;
+.botton1 ,.botton2{
     padding: 15px 80px 15px 80px;
-    margin-top: 35px;
     background-color: white;
     border: solid 1px;
+    margin-top: 50px;
+    margin-bottom: 20px; 
+    float: left;
 }
-.form-control input{
+.botton1{
+    margin-right: 50px; 
+}
+.text{
     border:2px solid;
 }
-.form-control select{
-    border:2px solid;
-}
-
 footer{
     clear: left;
     width: 100%;
