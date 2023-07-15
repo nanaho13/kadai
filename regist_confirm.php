@@ -124,8 +124,8 @@
                         <input type="hidden" value="<?php echo $_POST['gender'];?>" name="gender">
                         <input type="hidden" value="<?php echo $_POST['postal_code'];?>" name="postal_code">
                         <input type="hidden" value="<?php echo $_POST['prefecture'];?>" name="prefecture">
-                        <input type="hidden" value="<?php echo $_POST['address_1'];?>" name="addless_1">
-                        <input type="hidden" value="<?php echo $_POST['address_2'];?>" name="addless_2">
+                        <input type="hidden" value="<?php echo $_POST['address_1'];?>" name="address_1">
+                        <input type="hidden" value="<?php echo $_POST['address_2'];?>" name="address_2">
                         <input type="hidden" value="<?php echo $_POST['authority'];?>" name="authority">
                     </form>
                 </tr>
