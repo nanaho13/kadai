@@ -40,7 +40,7 @@ function ispass(pass){
 }
 
 function iscode(code){
-    return /\d{3}-?\d{4}/.test(code);
+    return /^[0-9]+$/.test(code);
 }
 
 function isaddress(address){

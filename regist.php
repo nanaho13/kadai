@@ -24,37 +24,37 @@
                 <table border="0">
                     <tr>
                         <td valign="top"><label for="family_name">名前 (姓)</label></td>
-                        <td class="form-control"><input type="text" maxlength="10" pattern="[\u4E00-\u9FFF\u3040-\u309Fー]*" name="family_name" size=35 class="text" id="family_name" value="<?php if( !empty($_POST['family_name']) ){ echo $_POST['family_name']; } ?>" >
+                        <td class="form-control"><input type="text" maxlength="10" name="family_name" size=35 class="text" id="family_name" value="<?php if( !empty($_POST['family_name']) ){ echo $_POST['family_name']; } ?>" >
                             <p>Error Message</p>
                         </td>
                     </tr>
                     <tr>
                         <td valign="top"><label>名前 (名)</label></td>
-                        <td class="form-control"><input type="text" maxlength="10" pattern="[\u4E00-\u9FFF\u3040-\u309Fー]*" name="last_name" size=35 class="text" id="last_name" maxlength"10" value="<?php if( !empty($_POST['last_name']) ){ echo $_POST['last_name']; } ?>" >
+                        <td class="form-control"><input type="text" maxlength="10" name="last_name" size=35 class="text" id="last_name" maxlength"10" value="<?php if( !empty($_POST['last_name']) ){ echo $_POST['last_name']; } ?>" >
                             <p>Error Message</p>
                         </td>
                     </tr>
                     <tr>
                         <td valign="top"><label>カナ (姓)</label></td>
-                        <td class="form-control"><input type="text" maxlength="10" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" name="family_name_kana" size=35 class="text" id="family_name_kana" value="<?php if( !empty($_POST['family_name_kana']) ){ echo $_POST['family_name_kana']; } ?>">
+                        <td class="form-control"><input type="text" maxlength="10" name="family_name_kana" size=35 class="text" id="family_name_kana" value="<?php if( !empty($_POST['family_name_kana']) ){ echo $_POST['family_name_kana']; } ?>">
                             <p>Error Message</p>
                         </td>
                     </tr>
                     <tr>
                         <td valign="top"><label>カナ (名)</label></td>
-                        <td class="form-control"><input type="text" maxlength="10" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" name="last_name_kana"  size=35 class="text" id="last_name_kana" value="<?php if( !empty($_POST['last_name_kana']) ){ echo $_POST['last_name_kana']; } ?>">
+                        <td class="form-control"><input type="text" maxlength="10"  name="last_name_kana"  size=35 class="text" id="last_name_kana" value="<?php if( !empty($_POST['last_name_kana']) ){ echo $_POST['last_name_kana']; } ?>">
                             <p>Error Message</p>
                         </td>
                     </tr>
                     <tr>
                         <td valign="top"><label>メールアドレス</label></td>
-                        <td class="form-control"><input type="text" maxlength="100" pattern="^[0-9A-Za-z@\-.]+$" name="mail" size=35 class="text" id="mail" value="<?php if( !empty($_POST['mail']) ){ echo $_POST['mail']; } ?>">
+                        <td class="form-control"><input type="text" maxlength="100" name="mail" size=35 class="text" id="mail" value="<?php if( !empty($_POST['mail']) ){ echo $_POST['mail']; } ?>">
                             <p>Error Message</p>
                         </td>
                     </tr>
                     <tr>
                         <td valign="top"><label>パスワード</label></td>
-                        <td class="form-control"><input type="password" name="password" size=35 class="text" id="password" pattern="^[a-zA-Z0-9]+$" maxlength="10" value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
+                        <td class="form-control"><input type="password" name="password" size=35 class="text" id="password" maxlength="10" value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } ?>">
                             <p>Error Message</p>
                         </td>
                     </tr>
@@ -67,7 +67,7 @@
                     </tr>
                     <tr>
                         <td valign="top"><label>郵便番号</label></td>
-                        <td class="form-control"><input type="text" maxlength="7" name="postal_code" size=10 class="text" id="postal_code" pattern="\d{3}-?\d{4}" value="<?php if( !empty($_POST['postal_code']) ){ echo $_POST['postal_code']; } ?>">
+                        <td class="form-control"><input type="text" maxlength="7" name="postal_code" size=10 class="text" id="postal_code" value="<?php if( !empty($_POST['postal_code']) ){ echo $_POST['postal_code']; } ?>">
                             <p>Error Message</p>
                         </td>
                     </tr>
