@@ -30,7 +30,7 @@
                     </tr>
                     <tr>
                         <td valign="top"><label>名前 (名)</label></td>
-                        <td class="form-control"><input type="text" maxlength="10" name="last_name" size=35 class="text" id="last_name" maxlength"10" value="<?php if( !empty($_POST['last_name']) ){ echo $_POST['last_name']; } ?>" >
+                        <td class="form-control"><input type="text" maxlength="10" name="last_name" size=35 class="text" id="last_name" maxlength="10" value="<?php if( !empty($_POST['last_name']) ){ echo $_POST['last_name']; } ?>" >
                             <p>Error Message</p>
                         </td>
                     </tr>
