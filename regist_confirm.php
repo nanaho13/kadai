@@ -99,7 +99,7 @@
             <table>
                 <tr>
                     <form method="post" action="regist.php">
-                        <td><input type="submit" class="botton1" value="前に戻る"></td>
+                        <td><input type="submit" class="button1" value="前に戻る"></td>
                         <input type="hidden" value="<?php echo $_POST['family_name'];?>" name="family_name">
                         <input type="hidden" value="<?php echo $_POST['last_name'];?>" name="last_name">
                         <input type="hidden" value="<?php echo $_POST['family_name_kana'];?>" name="family_name_kana">
@@ -114,7 +114,7 @@
                         <input type="hidden" value="<?php echo $_POST['authority'];?>" name="authority">
                     </form> 
                     <form method="post" action="regist_complete.php"> 
-                        <td><input type="submit" class="botton2" value="登録する"></td>
+                        <td><input type="submit" class="button2" value="登録する"></td>
                         <input type="hidden" value="<?php echo $_POST['family_name'];?>" name="family_name">
                         <input type="hidden" value="<?php echo $_POST['last_name'];?>" name="last_name">
                         <input type="hidden" value="<?php echo $_POST['family_name_kana'];?>" name="family_name_kana">

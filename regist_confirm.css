@@ -38,7 +38,7 @@ td{
     border: none;
     outline: none;
 }
-.botton1 ,.botton2{
+.button1 ,.button2{
     padding: 15px 80px 15px 80px;
     background-color: white;
     border: solid 1px;
@@ -46,7 +46,7 @@ td{
     margin-bottom: 20px; 
     float: left;
 }
-.botton1{
+.button1{
     margin-right: 50px; 
 }
 .text{

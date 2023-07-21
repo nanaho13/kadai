@@ -38,7 +38,7 @@ try {
             <h3>アカウント登録完了画面</h3>
             <h1>登録完了しました</h1>
             <form action="diblog.html">
-                <input type="submit" class="botton1" value="TOPページに戻る">
+                <input type="submit" class="button1" value="TOPページに戻る">
             </form>
         </main>
         <footer>

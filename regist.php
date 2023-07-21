@@ -148,7 +148,7 @@
                         </td>
                     </tr>
                 </table>
-                <input type="submit" class="submit" value="確認する" id="button" ><br>
+                <input type="submit" class="submit" value="確認する" id="button" name="submit"><br>
             </form>
         </main>
         <footer>
