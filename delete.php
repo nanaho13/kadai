@@ -26,3 +26,6 @@
         </header>
         <main>
             <h3>削除画面</h3>
+        </main>
+    </body>
+</html>

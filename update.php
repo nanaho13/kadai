@@ -26,3 +26,6 @@
         </header>
         <main>
             <h3>更新画面</h3>
+        </main>
+    </body>
+</html>
