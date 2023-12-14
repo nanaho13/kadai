@@ -1,5 +1,5 @@
 <?php
-$hash= password_hash($_POST['passwprd'], PASSWORD_DEFAULT);
+$hash= password_hash($_POST['password'], PASSWORD_DEFAULT);
 mb_internal_encoding("utf8");
 
 try {
