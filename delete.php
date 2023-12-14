@@ -1,5 +1,5 @@
 <!DOCTYPE! html>
-<html lamg="ja">
+<html lang="ja">
     <head>
       <meta charset="UTF-8">
       <title>D.I.Blog</title>
