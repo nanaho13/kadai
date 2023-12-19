@@ -16,6 +16,7 @@
             <li>問い合わせ</li>
             <li>その他</li>
             <li><a href="regist.php">アカウント登録</a></li>
+            <li><a href="list.php">アカウント一覧</a></li>
             </ul>
         </header>
         <main>
@@ -60,8 +61,8 @@
                     </tr>
                     <tr>
                         <td valign="top"><label>性別</label></td>
-                        <td class="form-control"><input type="radio" name="gender" size=35 class="text" checked value="0" <?php if( !empty($_POST['gender']) && $_POST['gender'] === "0" ){ echo 'checked'; } ?>>男
-                            <input type="radio" name="gender" size=35 class="text" value="1" <?php if( !empty($_POST['gender']) && $_POST['gender'] === "1" ){ echo 'checked'; } ?>>女
+                        <td class="form-control"><input type="radio" name="gender" size=35 class="text" checked value="0" <?php if( !empty($_POST['gender']) && $_POST['gender'] == "0" ){ echo 'checked'; } ?>>男
+                            <input type="radio" name="gender" size=35 class="text" value="1" <?php if( !empty($_POST['gender']) && $_POST['gender'] == "1" ){ echo 'checked'; } ?>>女
                                 <p>Error Message</p>
                         </td>
                     </tr>
@@ -141,8 +142,8 @@
                     <tr>
                         <td valign="top"><label>アカウント権限</label></td>
                         <td class="form-control"><select name="authority" class="text" id="authority">
-                            <option value="0" <?php if( !empty($_POST['authority']) && $_POST['authority'] === "0" ){ echo 'selected'; } ?> selected >一般</option>
-                            <option value="1" <?php if( !empty($_POST['authority']) && $_POST['authority'] === "1" ){ echo 'selected'; } ?>>管理者</option>
+                            <option value="0" <?php if( !empty($_POST['authority']) && $_POST['authority'] == "0" ){ echo 'selected'; } ?> selected >一般</option>
+                            <option value="1" <?php if( !empty($_POST['authority']) && $_POST['authority'] == "1" ){ echo 'selected'; } ?>>管理者</option>
                             </select>
                             <p></p>
                         </td>

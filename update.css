@@ -1,0 +1,77 @@
+.logo{
+    height: 100px;
+}
+header ul{
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+header ul li{
+    color: white;
+    list-style: none;
+    padding-right: 30px;
+    float: left;
+    font-family: serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h3{
+    text-align: left;
+    padding-left: 10%;
+    padding-bottom:15px;
+}
+form{
+    text-align: center;
+}
+table{
+    margin:auto;
+}
+td{
+    text-align: left;
+    padding-left:20px;
+}
+.form-control.error input{
+    border-color: red;
+    bottom: 0;
+}
+.form-control.error select{
+    border-color: red;
+    bottom: 0;
+}
+p{
+    color: red;
+    bottom: 0;
+    top:0;
+    visibility: hidden;
+}
+.form-control.error p{
+    visibility: visible;
+}
+.submit{
+    margin: auto;
+    padding: 15px 80px 15px 80px;
+    margin-top: 35px;
+    background-color: white;
+    border: solid 1px;
+}
+.form-control input{
+    border:2px solid;
+}
+.form-control select{
+    border:2px solid;
+}
+
+footer{
+    clear: left;
+    width: 100%;
+    height:30px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+}

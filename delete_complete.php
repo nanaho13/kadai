@@ -1,16 +1,13 @@
 <?php
-$hash= password_hash($_POST['password'], PASSWORD_DEFAULT);
 mb_internal_encoding("utf8");
 
 try {
     $pdo = new PDO("mysql:dbname=diworks_account;host=localhost;","root","root");
-    $ret= $pdo ->exec("insert into account(family_name,last_name,family_name_kana,last_name_kana,mail,password,gender,postal_code,prefecture,address_1,address_2,authority) values('".$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_name_kana']."','".$_POST['last_name_kana']."','".$_POST['mail']."','".$hash."','".$_POST['gender']."','".$_POST['postal_code']."','".$_POST['prefecture']."','".$_POST['address_1']."','".$_POST['address_2']."','".$_POST['authority']."');");
-    if (!$ret) {
-        echo "<FONT COLOR=red>エラーが発生したためアカウント登録できません。</FONT>";
-        exit();
-    }
+    $stmt = $pdo->prepare("DELETE FROM account WHERE id = " . $_POST["id"] . " ");
+    
+    $stmt->execute();
 } catch (PDOException $e) {
-    echo "<FONT COLOR=red>エラーが発生したためアカウント登録できません。</FONT>" ;
+    echo "<FONT COLOR=red>エラーが発生したためアカウント更新できません。</FONT>" . $e->getMessage();
     exit();
 }?>
 
@@ -19,7 +16,7 @@ try {
   <head>
       <meta charset="UTF-8">
       <title>D.I.Blog</title>
-      <link rel="stylesheet" type="text/css" href="regist_complete.css">
+      <link rel="stylesheet" type="text/css" href="delete_complete.css">
   </head>
   <body>
       <header>
@@ -36,8 +33,8 @@ try {
             </ul>
         </header>
         <main>
-            <h3>アカウント登録完了画面</h3>
-            <h1>登録完了しました</h1>
+            <h3>アカウント削除完了画面</h3>
+            <h1>更削除完了しました</h1>
             <form action="diblog.html">
                 <input type="submit" class="button1" value="TOPページに戻る">
             </form>

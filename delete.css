@@ -1,0 +1,64 @@
+.logo{
+    height: 100px;
+}
+header ul{
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+header ul li{
+    color: white;
+    list-style: none;
+    padding-right: 30px;
+    float: left;
+    font-family: serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h3{
+    text-align: left;
+    padding-left:10%; 
+}
+form{
+    text-align: center;
+}
+table{
+    margin:auto;
+}
+td{
+    text-align: left;
+    padding-top: 25px;
+    padding-left:50px;
+}
+.password{
+    border: none;
+    outline: none;
+}
+.button1 ,.button2{
+    padding: 15px 80px 15px 80px;
+    background-color: white;
+    border: solid 1px;
+    margin-top: 50px;
+    margin-bottom: 20px; 
+    float: left;
+}
+.button1{
+    margin-right: 50px; 
+}
+.text{
+    border:2px solid;
+}
+footer{
+    clear: left;
+    width: 100%;
+    height:30px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+}

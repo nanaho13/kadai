@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <title>D.I.Blog</title>
-      <link rel="stylesheet" type="text/css" href="regist_confirm.css">
+      <link rel="stylesheet" type="text/css" href="update_confirm.css">
   </head>
   <body>
       <header>
@@ -20,7 +20,7 @@
             </ul>
         </header>
         <main>
-            <h3>アカウント登録確認画面</h3>
+            <h3>アカウント更新確認画面</h3>
             <table border="0">
                 <tr>
                     <div>
@@ -99,7 +99,7 @@
             </table>
             <table>
                 <tr>
-                    <form method="post" action="regist.php">
+                    <form method="post" action="update.php">
                         <td><input type="submit" class="button1" value="前に戻る"></td>
                         <input type="hidden" value="<?php echo $_POST['family_name'];?>" name="family_name">
                         <input type="hidden" value="<?php echo $_POST['last_name'];?>" name="last_name">
@@ -113,9 +113,10 @@
                         <input type="hidden" value="<?php echo $_POST['address_1'];?>" name="address_1">
                         <input type="hidden" value="<?php echo $_POST['address_2'];?>" name="address_2">
                         <input type="hidden" value="<?php echo $_POST['authority'];?>" name="authority">
+                        <input type="hidden" value="<?php echo $_POST['id'];?>" name="id">
                     </form> 
-                    <form method="post" action="regist_complete.php"> 
-                        <td><input type="submit" class="button2" value="登録する"></td>
+                    <form method="post" action="update_complete.php"> 
+                        <td><input type="submit" class="button2" value="更新する"></td>
                         <input type="hidden" value="<?php echo $_POST['family_name'];?>" name="family_name">
                         <input type="hidden" value="<?php echo $_POST['last_name'];?>" name="last_name">
                         <input type="hidden" value="<?php echo $_POST['family_name_kana'];?>" name="family_name_kana">
@@ -128,6 +129,7 @@
                         <input type="hidden" value="<?php echo $_POST['address_1'];?>" name="address_1">
                         <input type="hidden" value="<?php echo $_POST['address_2'];?>" name="address_2">
                         <input type="hidden" value="<?php echo $_POST['authority'];?>" name="authority">
+                        <input type="hidden" value="<?php echo $_POST['id'];?>" name="id">
                     </form>
                 </tr>
             </table>
@@ -137,4 +139,3 @@
         </footer>
     </body>
 </html>
-      
