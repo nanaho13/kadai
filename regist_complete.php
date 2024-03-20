@@ -1,10 +1,13 @@
 <?php
-$hash= password_hash($_POST['password'], PASSWORD_DEFAULT);
-mb_internal_encoding("utf8");
+$method ='aes-256-cbc';
+$key ='anngou-key123456';
+$iv ='anngou-key123456';
+$data = $_POST['password'];
+$encrypted = openssl_encrypt($data, $method, $key, 0, $iv);
 
 try {
     $pdo = new PDO("mysql:dbname=diworks_account;host=localhost;","root","root");
-    $ret= $pdo ->exec("insert into account(family_name,last_name,family_name_kana,last_name_kana,mail,password,gender,postal_code,prefecture,address_1,address_2,authority) values('".$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_name_kana']."','".$_POST['last_name_kana']."','".$_POST['mail']."','".$hash."','".$_POST['gender']."','".$_POST['postal_code']."','".$_POST['prefecture']."','".$_POST['address_1']."','".$_POST['address_2']."','".$_POST['authority']."');");
+    $ret= $pdo ->exec("insert into account(family_name,last_name,family_name_kana,last_name_kana,mail,password,gender,postal_code,prefecture,address_1,address_2,authority) values('".$_POST['family_name']."','".$_POST['last_name']."','".$_POST['family_name_kana']."','".$_POST['last_name_kana']."','".$_POST['mail']."','".$encrypted."','".$_POST['gender']."','".$_POST['postal_code']."','".$_POST['prefecture']."','".$_POST['address_1']."','".$_POST['address_2']."','".$_POST['authority']."');");
     if (!$ret) {
         echo "<FONT COLOR=red>エラーが発生したためアカウント登録できません。</FONT>";
         exit();

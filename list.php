@@ -13,7 +13,7 @@
             } catch (PDOException $error) {
             exit("データベースに接続できませんでした。<br>" . $error->getMessage());
         }
-        $stmt = $pdo->query("select * from account ORDER BY id DESC");
+        $stmt = $pdo->query("select * from account ORDER BY id DESC ");
         ?>
         <header>
             <img src="diblog_logo.jpg" class="logo">

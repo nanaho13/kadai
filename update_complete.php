@@ -1,12 +1,15 @@
 <?php
-$hash= password_hash($_POST['password'], PASSWORD_DEFAULT);
-mb_internal_encoding("utf8");
+$method ='aes-256-cbc';
+$key ='anngou-key123456';
+$iv ='anngou-key123456';
+$data = $_POST['password'];
+$encrypted = openssl_encrypt($data, $method, $key, 0, $iv);
 
 try {
     $pdo = new PDO("mysql:dbname=diworks_account;host=localhost;","root","root");
     $stmt = $pdo->prepare("UPDATE account SET family_name =?, last_name = ?, family_name_kana = ?, last_name_kana =?, mail =?, password =?, gender = ?, postal_code = ?, prefecture = ?, address_1 = ?, address_2 = ?, authority = ? WHERE id = ? ");
     
-    $stmt->execute(array($_POST['family_name'], $_POST['last_name'], $_POST['family_name_kana'] ,$_POST['last_name_kana'],$_POST['mail'], $hash, $_POST['gender'], $_POST['postal_code'], $_POST['prefecture'], $_POST['address_1'], $_POST['address_2'], $_POST['authority'], $_POST['id']));
+    $stmt->execute(array($_POST['family_name'], $_POST['last_name'], $_POST['family_name_kana'] ,$_POST['last_name_kana'],$_POST['mail'], $encrypted, $_POST['gender'], $_POST['postal_code'], $_POST['prefecture'], $_POST['address_1'], $_POST['address_2'], $_POST['authority'], $_POST['id']));
 } catch (PDOException $e) {
     echo "<FONT COLOR=red>エラーが発生したためアカウント更新できません。</FONT>" . $e->getMessage();
     exit();

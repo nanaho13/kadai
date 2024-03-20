@@ -14,7 +14,12 @@
             exit("データベースに接続できませんでした。<br>" . $error->getMessage());
         }
         $stmt = $pdo->query("select * from account where id ='" . $_POST["id"] . "'");
-        $row = $stmt->fetch()
+        $row = $stmt->fetch();
+        $method ='aes-256-cbc';
+        $key ='anngou-key123456';
+        $iv ='anngou-key123456';
+        $encrypted = $row['password'];
+        $decrypted=openssl_decrypt($encrypted, $method, $key, 0, $iv);
         ?>
         <header>
             <img src="diblog_logo.jpg" class="logo">
@@ -65,7 +70,7 @@
                     </tr>
                     <tr>
                         <td valign="top"><label>パスワード</label></td>
-                        <td class="form-control"><input type="password" name="password" size=35 class="text" id="password" maxlength="10" value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } else { echo $row['password']; }?>">
+                        <td class="form-control"><input type="password" name="password" size=35 class="text" id="password" maxlength="10" value="<?php if( !empty($_POST['password']) ){ echo $_POST['password']; } else { echo $decrypted; }?>">
                             <p>Error Message</p>
                         </td>
                     </tr>

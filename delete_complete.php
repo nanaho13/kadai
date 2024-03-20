@@ -3,9 +3,9 @@ mb_internal_encoding("utf8");
 
 try {
     $pdo = new PDO("mysql:dbname=diworks_account;host=localhost;","root","root");
-    $stmt = $pdo->prepare("DELETE FROM account WHERE id = " . $_POST["id"] . " ");
+    $stmt = $pdo->prepare("UPDATE account SET delete_flag=? WHERE id = ? ");
     
-    $stmt->execute();
+    $stmt->execute(array('1',$_POST['id']));
 } catch (PDOException $e) {
     echo "<FONT COLOR=red>エラーが発生したためアカウント更新できません。</FONT>" . $e->getMessage();
     exit();
@@ -34,7 +34,7 @@ try {
         </header>
         <main>
             <h3>アカウント削除完了画面</h3>
-            <h1>更削除完了しました</h1>
+            <h1>削除完了しました</h1>
             <form action="diblog.html">
                 <input type="submit" class="button1" value="TOPページに戻る">
             </form>

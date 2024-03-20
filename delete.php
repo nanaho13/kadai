@@ -7,14 +7,18 @@
     </head>
     <body>
         <?php
-        mb_internal_encoding("utf8");
         try{
             $pdo = new PDO("mysql:dbname=diworks_account;host=localhost;","root","root");
             } catch (PDOException $error) {
             exit("データベースに接続できませんでした。<br>" . $error->getMessage());
         }
         $stmt = $pdo->query("select * from account where id ='" . $_POST["id"] . "'");
-        $row = $stmt->fetch()
+        $row = $stmt->fetch();
+        $method ='aes-256-cbc';
+        $key ='anngou-key123456';
+        $iv ='anngou-key123456';
+        $encrypted = $row['password'];
+        $decrypted=openssl_decrypt($encrypted, $method, $key, 0, $iv);
         ?>
         <header>
             <img src="diblog_logo.jpg" class="logo">
@@ -65,7 +69,7 @@
                 <tr>
                     <div>
                         <td><label>パスワード</label></td>
-                        <td><?php echo str_repeat('●', strlen($row['password']));?></td>
+                        <td><?php echo str_repeat('●', strlen($decrypted));?></td>
                     </div>
                 </tr>
                 <tr>
